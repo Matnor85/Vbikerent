@@ -1,0 +1,401 @@
+/* CSS-variabler för att enkelt byta färger senare */
+:root {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #e63946; /* En snygg, aggressiv röd accentfärg */
+  --card-bg: #1e1e1e;
+}
+
+/* Grundläggande reset och smooth scroll */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Detta gör att menyn glider snyggt! */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 18, 0.95);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Grundinställning för hamburgarikonen (dold på dator) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001; /* Ligger över menyn */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Styling för den aktiva länken i menyn */
+nav a.active {
+  color: var(--primary-color);
+  /* En liten linje under länken är en snygg detalj */
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Sektioner generellt */
+section {
+  padding: 6rem 2rem 4rem; /* Padding top för att headern inte ska täcka innehållet */
+  min-height: 100vh; /* Varje sektion tar upp minst en hel skärmhöjd */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero-sektionen (Toppen) */
+#hero {
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1544191696-102dbbce11a7?auto=format&fit=crop&w=1920&q=80")
+      center/cover;
+}
+
+#hero h1 {
+  /* clamp: minsta storlek, fluid storlek baserad på skärmbredd (vw), största storlek */
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 2rem;
+  transition:
+    transform 0.2s,
+    background 0.3s;
+}
+
+.btn:hover {
+  background-color: #c02d39;
+  transform: scale(1.05);
+}
+
+/* Cykel-rutnätet */
+.bike-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 3rem;
+}
+
+.bike-card {
+  position: relative; /* Gör att vi kan positionera badgen snyggt */
+  background-color: var(--card-bg);
+  padding: 2.5rem 2rem 2rem 2rem; /* Lite extra padding i toppen */
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.bike-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #222;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* FAQ Accordion Styling */
+.faq-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+details {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Håller hörn snygga när den fälls ut */
+}
+
+/* Frågan (klickbar) */
+summary {
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none; /* Tar bort standardpilen i vissa webbläsare */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Egen pil för att visa om den är öppen/stängd */
+summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+/* När details är öppen, snurra pilen/plusset */
+details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* Gömmer standardpilen i Webkit-webbläsare (Chrome/Safari) */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Svaret */
+.faq-answer {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #ccc; /* Lite ljusare grå för brödtext */
+  border-top: 1px solid #333;
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Formulär Styling */
+#contact {
+  background-color: #0b0b0b; /* Gör sektionen aningen mörkare än resten för lite kontrast */
+}
+
+#contact-description {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #121212;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+/* Snygg effekt när man klickar i ett fält */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.3);
+}
+
+.form-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* --- Footer Styling --- */
+footer {
+  background-color: #0a0a0a;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem; /* Ett mycket mjukare avstånd som håller ihop gruppen! */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* HÄR ÄR TILLÄGGET SOM FIXAR DEN RAKA VÄNSTERKANTEN PÅ MOBILEN */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Tvingar rubrik och ikoner att bilda en rak vänsterkant */
+  width: 250px; /* Ger kolumnen en fast bredd */
+}
+
+.footer-col h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  align-self: flex-start;
+}
+
+/* Linjerar upp ikoner med texten snyggt */
+.footer-col p,
+.footer-col a.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem; /* Denna rad skapar mer luft mellan valen! */
+}
+
+/* Du kan till och med ge ikonerna din accentfärg om du vill! */
+.footer-col i {
+  /* color: var(--primary-color); */
+  font-size: 1.1rem;
+}
+
+/* Styling för alla länkar i footern (tar bort det blåa) */
+.footer-col a {
+  color: #aaa; /* Ger dem en snygg ljusgrå färg */
+  text-decoration: none; /* Tar bort understrykningen */
+  transition: color 0.3s; /* Gör så att färgbytet vid hover blir mjukt */
+}
+
+.footer-col a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #050505;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  /* Generell responsivitet */
+  #hero h1 {
+    font-size: 2.5rem; /* Mindre rubrik på mobilen */
+  }
+
+  section {
+    padding: 5rem 1.5rem 3rem; /* Lite tajtare marginaler */
+  }
+
+  /* Hamburgermenyn blir synlig */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Gömmer standardmenyn och gör den till en utfällbar mobilmeny */
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Placerar menyn utanför skärmen till höger */
+    width: 100%;
+    height: 100vh; /* Tar upp hela skärmen */
+    background-color: rgba(18, 18, 18, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease;
+  }
+
+  /* Denna klass läggs på via JavaScript när man klickar på hamburgaren */
+  nav ul.active {
+    left: 0;
+  }
+
+  /* Justerar länkarna i mobilmenyn */
+  nav ul li {
+    margin: 1.5rem 0;
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  /* Animering av ikonen när menyn är öppen (blir ett X) */
+  .hamburger.toggle .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.toggle .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

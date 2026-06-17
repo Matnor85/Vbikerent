@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vargöns MTB Uthyrning</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Vargöns MTB</div>
+
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#hero">Start</a></li>
+          <li><a href="#how-it-works">Så funkar det</a></li>
+          <li><a href="#bikes">Våra Cyklar</a></li>
+          <li><a href="#faq">Frågor & Svar</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+
+    <section id="hero">
+      <h1>Ett äventyr på berget.</h1>
+      <p>
+        Hyr moderna, nyservade mountainbikes direkt via mobilen. Dygnet runt.
+      </p>
+      <a href="#bikes" class="btn">Boka din cykel nu</a>
+    </section>
+
+    <section id="how-it-works">
+      <h2>Så funkar det</h2>
+      <p style="margin-top: 2rem; max-width: 600px; text-align: center">
+        Här kan vi lägga in tre snygga ikoner för "1. Boka online", "2. Lås upp
+        med appen" och "3. Kör hårt".
+      </p>
+    </section>
+
+    <section id="bikes">
+      <h2>Våra Cyklar</h2>
+      <p>Vi har 11 grymma cyklar redo för stigarna.</p>
+
+      <div class="bike-grid" id="bike-grid"></div>
+    </section>
+
+    <!-- Frågor & Svar -->
+    <section id="faq">
+      <h2>Vanliga frågor</h2>
+
+      <div class="faq-container">
+        <details>
+          <summary>Var hämtar jag cykeln?</summary>
+          <div class="faq-answer">
+            <p>
+              Du hämtar och lämnar cykeln vid vår container vid spårcentralen i
+              skogen. Exakt adress och vägbeskrivning får du i bekräftelsemailet
+              när du bokar.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Hur fungerar det med appen och låsen?</summary>
+          <div class="faq-answer">
+            <p>
+              När du har bokat får du en länk för att ladda ner vår app. När du
+              är framme vid cykeln använder du appen för att låsa upp det smarta
+              låset via Bluetooth. Enkelt och helt kontaktlöst!
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vad händer om jag får punktering i skogen?</summary>
+          <div class="faq-answer">
+            <p>
+              Alla våra cyklar är utrustade med en liten sadelväska som
+              innehåller extra slang, däckavtagare och en minipump. Skulle det
+              krisa totalt finns ett journummer i appen.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Hör av dig</h2>
+      <p id="contact-description">
+        Har du frågor om gruppbokningar, cyklarna eller vill du bara säga hej?
+        Skicka ett meddelande!
+      </p>
+
+      <form id="contact-form" action="" method="POST">
+        <div class="form-group">
+          <label for="name">Namn</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Ditt namn"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-postadress</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="din.email@exempel.se"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Meddelande</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Vad funderar du på?"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn form-btn">Skicka meddelande</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <!-- <div class="footer-col">
+          <h3>Vargöns MTB Uthyrning</h3>
+          <p>
+            Din lokala cykeluthyrning. Vi gör det enkelt att uppleva naturen på
+            två hjul med modern utrustning och smarta lösningar.
+          </p>
+        </div> -->
+
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Spårcentralen, Vargön</p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+46701234567">070-123 45 67</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hej@vargonsmtb.se">hej@vargonsmtb.se</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Följ oss</h3>
+          <a href="https://www.instagram.com" class="social-link"
+            ><i class="fa-brands fa-instagram"></i> Instagram</a
+          >
+          <a href="https://www.facebook.com" class="social-link"
+            ><i class="fa-brands fa-facebook"></i> Facebook</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vargöns MTB Uthyrning. Alla rättigheter reserverade.</p>
+      </div>
+    </footer>
+  </body>
+</html>
