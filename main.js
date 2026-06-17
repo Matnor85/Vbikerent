@@ -75,10 +75,10 @@ const bikes = [
   },
   {
     id: 2,
-    name: "Hardtail Trailblazer",
+    name: "XC Carbon Flyer",
     type: "Hardtail",
-    desc: "Perfekt för snabba grusvägar och enklare skogsstigar. Lätt och följsam.",
-    size: "L (175-190 cm)",
+    desc: "Fjäderlätt kolfiberram för tävlingscyklisten. Maximerar kraftöverföringen i varje tramptag och flyger uppför backarna.",
+    size: "S (155-168 cm)",
   },
   {
     id: 3,
@@ -89,10 +89,31 @@ const bikes = [
   },
   {
     id: 4,
-    name: "Enduro Beast",
+    name: "Downhill Destroyer",
     type: "Full Suspension",
-    desc: "Heldämpad herre på täppan. Sväljer alla rötter, stenar och drop i Vargöns skogar.",
+    desc: "Aggressiv geometri och massiv slaglängd. Specialbyggd för att krossa stenkistor och flyga nerför bikeparken.",
     size: "L (180-195 cm)",
+  },
+  {
+    id: 5,
+    name: "All-Mountain Explorer",
+    type: "Full Suspension",
+    desc: "Den perfekta allround-maskinen. Klättrar som en get uppför berget och ger grymt självförtroende på vägen ner.",
+    size: "XL (190-205 cm)",
+  },
+  {
+    id: 6,
+    name: "Electric Mud-Trekker",
+    type: "e-MTB",
+    desc: "Utrustad med en kraftfull elmotor som ger dig den där extra knuffen uppför de brantaste branterna. Lekfull i alla terränger.",
+    size: "L (178-192 cm)",
+  },
+  {
+    id: 7,
+    name: "Dirt Jumper Pro",
+    type: "Dirt/Street",
+    desc: "Avskalad och robust design, byggd för att ta stryk i pumptracken eller på dirtjumpsen. Maximerad för luftfärder.",
+    size: "One Size",
   },
   // Här kan du enkelt fylla på med cykel 5 till 11 när du vet exakt vad han har!
 ];
