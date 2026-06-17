@@ -12,6 +12,7 @@
   --border-color: #333;
   --nav-color: rgba(69, 72, 78, 0.652); /* För navigationens bakgrundsfärg */
   --nav-link-color: #f5f5f5; /* För navigationens länkar */
+  --logo-color: #f5f5f5; /* För logotypen */
   --button-color: #1e7a0a; /* För knappar */
   --button-hover-color: #145207;
 
@@ -102,7 +103,7 @@ header {
 
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--logo-color);
 }
 
 nav ul {
