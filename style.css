@@ -12,6 +12,8 @@
   --border-color: #333;
   --nav-color: rgba(69, 72, 78, 0.652); /* För navigationens bakgrundsfärg */
   --nav-link-color: #f5f5f5; /* För navigationens länkar */
+  --button-color: #29a40e; /* För knappar */
+  --button-hover-color: #1d620e;
 
   /* Typografi */
   --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -52,7 +54,7 @@ section {
 /* Allmänna knappar */
 .btn {
   display: inline-block;
-  background-color: var(--primary-color);
+  background-color: var(--button-color);
   color: white;
   padding: 1rem 2.5rem;
   text-decoration: none;
@@ -65,7 +67,7 @@ section {
 }
 
 .btn:hover {
-  background-color: #c02d39; /* Något mörkare röd */
+  background-color: var(--button-hover-color); /* Något mörkare grönt */
   transform: scale(1.05);
 }
 
