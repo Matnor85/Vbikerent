@@ -1,9 +1,10 @@
-// Just nu använder vi CSS för smooth scrolling, men här kommer du
-// lägga in koden för hamburgermenyn när vi anpassar sidan för mobiler!
-console.log("Sidan är laddad och redo att byggas vidare på!");
+/**
+ * Huvudscript för Vargöns MTB Uthyrning
+ * Filen laddas med 'defer' i HTML, så DOM:en är redo när koden körs.
+ */
 
 // ==========================================
-// HAMBURGERMENY (MOBIL)
+// 1. MOBILMENY (HAMBURGARE)
 // ==========================================
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
@@ -23,32 +24,27 @@ menuLinks.forEach((link) => {
   });
 });
 
-// 1. Hämta alla sektioner på sidan och alla länkar i menyn
+// ==========================================
+// 2. SCROLLSPY (MARKERA AKTIV LÄNK I MENYN)
+// ==========================================
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 
-// 2. Skapa vår "observatör"
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.5, // Betyder: "Agera när minst 50% av sektionen syns på skärmen"
+  threshold: 0.5, // Agera när minst 50% av sektionen syns på skärmen
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    // Om sektionen korsar skärmen (är synlig)
     if (entry.isIntersecting) {
-      // Hämta ID:t på sektionen vi tittar på just nu (t.ex. "bikes")
       const currentId = entry.target.getAttribute("id");
 
-      // Loopa igenom alla meny-länkar
+      // Loopa igenom alla meny-länkar och uppdatera aktiv klass
       navLinks.forEach((link) => {
-        // Ta först bort "active"-klassen från ALLA länkar
         link.classList.remove("active");
-
-        // Om länkens href (t.ex. "#bikes") matchar sektionens ID...
         if (link.getAttribute("href") === `#${currentId}`) {
-          // ...lägg till "active"-klassen på just denna länk!
           link.classList.add("active");
         }
       });
@@ -56,15 +52,14 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// 3. Säg åt observatören att börja titta på alla sektioner
+// Säg åt observatören att börja titta på alla sektioner
 sections.forEach((section) => {
   observer.observe(section);
 });
-// ==========================================
-// CYKEL-DATA OCH DYNAMISK RENDERING
-// ==========================================
 
-// 1. Vår "databas" - En array med objekt för cyklarna
+// ==========================================
+// 3. CYKEL-DATA OCH DYNAMISK RENDERING
+// ==========================================
 const bikes = [
   {
     id: 1,
@@ -72,6 +67,8 @@ const bikes = [
     type: "Hardtail",
     desc: "Perfekt för snabba grusvägar och enklare skogsstigar. Lätt och följsam.",
     size: "M (165-178 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIwUukYvmVW8Oc0jyYc77kwJMLwErfkV4Q7JPF42TAEw&s",
   },
   {
     id: 2,
@@ -79,6 +76,8 @@ const bikes = [
     type: "Hardtail",
     desc: "Fjäderlätt kolfiberram för tävlingscyklisten. Maximerar kraftöverföringen i varje tramptag och flyger uppför backarna.",
     size: "S (155-168 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLpmMAvhYIQbfagHaKV1_mZZOmsto5d9cMe_fDfh1qQA&s",
   },
   {
     id: 3,
@@ -86,6 +85,8 @@ const bikes = [
     type: "Full Suspension",
     desc: "Heldämpad herre på täppan. Sväljer alla rötter, stenar och drop i Vargöns skogar.",
     size: "M (170-183 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD1eSyexDrQJzRY4dwcUUG96QLTKo242xE2TTT5_8l9g&s",
   },
   {
     id: 4,
@@ -93,6 +94,8 @@ const bikes = [
     type: "Full Suspension",
     desc: "Aggressiv geometri och massiv slaglängd. Specialbyggd för att krossa stenkistor och flyga nerför bikeparken.",
     size: "L (180-195 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ7YUhWmNQLd16Gcyo7k6Ydb_PivkTJIMphubn9853aw&s",
   },
   {
     id: 5,
@@ -100,6 +103,8 @@ const bikes = [
     type: "Full Suspension",
     desc: "Den perfekta allround-maskinen. Klättrar som en get uppför berget och ger grymt självförtroende på vägen ner.",
     size: "XL (190-205 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPr6Jo0S1gvP5HKRJ5475qweIqez18T_7-U8omRxTXMg&s",
   },
   {
     id: 6,
@@ -107,6 +112,8 @@ const bikes = [
     type: "e-MTB",
     desc: "Utrustad med en kraftfull elmotor som ger dig den där extra knuffen uppför de brantaste branterna. Lekfull i alla terränger.",
     size: "L (178-192 cm)",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4Q64BsNED4vpAg7Z0ckJd0AaNmen93Nxs3np1wlT0w&s",
   },
   {
     id: 7,
@@ -114,36 +121,36 @@ const bikes = [
     type: "Dirt/Street",
     desc: "Avskalad och robust design, byggd för att ta stryk i pumptracken eller på dirtjumpsen. Maximerad för luftfärder.",
     size: "One Size",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ4_asF5DtAUAF_Zeq37UUoB-uEd6jhckVdBFIRr2fSg&s",
   },
-  // Här kan du enkelt fylla på med cykel 5 till 11 när du vet exakt vad han har!
 ];
 
-// 2. Funktion som skapar och injicerar HTML-korten på sidan
 function renderBikes() {
   const bikeGrid = document.getElementById("bike-grid");
 
-  // Säkerhetsåtgärd så koden inte kraschar om vi råkar byta namn på ID:t i HTML
   if (!bikeGrid) return;
 
-  // Rensa containern först (bra praxis)
   bikeGrid.innerHTML = "";
 
-  // Loopa igenom arrayen och skapa HTML för varje cykel
+  // Loopa igenom arrayen och skapa HTML
   bikes.forEach((bike) => {
     const bikeCardHTML = `
       <div class="bike-card" data-id="${bike.id}">
         <div class="bike-badge">${bike.type}</div>
+        
+        <img src="${bike.image}" alt="${bike.name}" class="bike-image">
+        
         <h3>${bike.name}</h3>
         <p>${bike.desc}</p>
-        <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">Storlek: ${bike.size}</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Storlek: ${bike.size}</p>
         <a href="#" class="btn" style="padding: 0.5rem 1rem; margin-top: 1rem;">Boka denna</a>
       </div>
     `;
 
-    // Lägg till kortet i vår grid
     bikeGrid.innerHTML += bikeCardHTML;
   });
 }
 
-// 3. Kör funktionen direkt när filen laddas (eftersom vi har 'defer' i HTML är DOM:en redo)
+// Kör funktionen när filen laddas
 renderBikes();

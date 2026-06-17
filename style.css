@@ -151,10 +151,45 @@ nav a:hover {
 /* ==========================================
    SEKTION 2: SÅ FUNKAR DET
    ========================================== */
-#how-it-works-description {
-  margin-top: 2rem;
-  max-width: 600px;
+.steps-grid {
+  display: grid;
+  /* Detta skapar 4 kolumner på stor skärm, men staplar dem på mobilen */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-top: 3rem;
+}
+
+.step-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
   text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+/* En liten sväv-effekt när man drar musen över stegen */
+/* .step-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+} */
+
+.step-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.step-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* ==========================================
