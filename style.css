@@ -301,7 +301,17 @@ summary::-webkit-details-marker {
 }
 
 /* ==========================================
-   SEKTION 5: KONTAKT
+   SEKTION 5: HITTA HIT
+   ========================================== */
+#map {
+  width: 90vw;
+  max-width: 800px;
+  min-height: 400px;
+  border: 0;
+  border-radius: var(--border-radius-lg);
+}
+/* ==========================================
+   SEKTION 6: KONTAKT
    ========================================== */
 #contact {
   background-color: var(--bg-alt-color);
