@@ -144,7 +144,7 @@ function renderBikes() {
         <h3>${bike.name}</h3>
         <p>${bike.desc}</p>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Storlek: ${bike.size}</p>
-        <a href="#" class="btn" style="padding: 0.5rem 1rem; margin-top: 1rem;">Boka denna</a>
+        <a href="#" class="btn" style="padding: 0.5rem 1rem; margin-top: 1rem;">Boka</a>
       </div>
     `;
 
