@@ -10,6 +10,7 @@ let currentLang = "sv"; // Standard språk är svenska
 // ==========================================
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
+// VIKTIGT: Välj ENDAST vanliga navigeringslänkar, inte språklänkarna!
 const menuLinks = document.querySelectorAll("#nav-menu li a");
 
 // Öppna/stäng menyn när man klickar på hamburgarikonen
@@ -369,11 +370,17 @@ if (langToggleBtn && langMenu) {
 
       changeLanguage(selectedLang);
 
-      // Uppdatera texten på knappen till t.ex. "SV" (toUpperCase gör det till versaler)
+      // Uppdatera texten på knappen till t.ex. "SV"
       langText.innerText = selectedLang.toUpperCase();
 
-      // Stäng menyn
+      // Stäng språkmenyn
       langMenu.classList.remove("show");
+
+      // NYTT: Om vi är på mobil (hamburgermenyn är aktiv), stäng hela menyn efter språkval
+      if (navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("toggle");
+      }
     });
   });
 
