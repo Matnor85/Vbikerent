@@ -88,6 +88,12 @@ header {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* 1. Trycker menyn hela vägen till höger */
+header nav {
+  margin-left: auto;
+  margin-right: 1.5rem; /* Skapar lite luft mellan menyn och språkknappen */
+}
+
 .logo-pic {
   height: 100px;
   width: auto;
@@ -126,6 +132,70 @@ nav a.active {
 }
 
 nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Val av språk dropdown */
+.lang-dropdown {
+  position: relative; /* Viktigt för att listan ska hamna rätt */
+}
+
+/* Själva rullgardinslistan (Dold som standard) */
+.lang-menu {
+  position: absolute;
+  top: 120%; /* Placerar den strax under knappen */
+  right: 0; /* Högerställer den mot knappen */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  list-style: none;
+  min-width: 140px;
+  display: none; /* Dold från start! */
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Klassen vi lägger till med JavaScript för att visa listan */
+.lang-menu.show {
+  display: flex;
+}
+
+/* Länkarna inuti listan */
+.lang-menu li a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+/* 2. Gör språkknappen snygg och modern */
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.lang-menu li a:hover {
+  background-color: var(--bg-alt-color);
   color: var(--primary-color);
 }
 

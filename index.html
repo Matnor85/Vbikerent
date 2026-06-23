@@ -30,7 +30,19 @@
           <li><a href="#contact" data-i18n="nav-contact">Kontakt</a></li>
         </ul>
       </nav>
+      <div class="lang-dropdown">
+        <button id="lang-toggle" class="lang-btn">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-text">SV</span>
+          <i class="fa-solid fa-chevron-down" style="font-size: 0.7em"></i>
+        </button>
 
+        <ul id="lang-menu" class="lang-menu">
+          <li><a href="#" data-lang="sv">Svenska (SV)</a></li>
+          <li><a href="#" data-lang="en">English (EN)</a></li>
+          <li><a href="#" data-lang="de">Deutsch (DE)</a></li>
+        </ul>
+      </div>
       <div class="hamburger" id="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -39,21 +51,21 @@
     </header>
 
     <section id="hero">
-      <h1>Ett äventyr på berget.</h1>
-      <p>
+      <h1 data-i18n="hero-title">Ett äventyr på berget.</h1>
+      <p data-i18n="hero-desc">
         Hyr moderna, nyservade mountainbikes direkt via mobilen. Dygnet runt.
       </p>
-      <a href="#bikes" class="btn">Boka din cykel nu</a>
+      <a href="#bikes" class="btn" data-i18n="hero-btn">Boka din cykel nu</a>
     </section>
 
     <section id="how-it-works">
-      <h2>Så funkar det</h2>
+      <h2 data-i18n="how-title">Så funkar det</h2>
 
       <div class="steps-grid">
         <div class="step-card">
           <i class="fa-solid fa-mobile-screen-button step-icon"></i>
-          <h3>1. Boka online</h3>
-          <p>
+          <h3 data-i18n="how-step1">1. Boka online</h3>
+          <p data-i18n="how-step1-desc">
             Välj din cykel och datum direkt här på sidan. Betala snabbt och
             säkert.
           </p>
@@ -61,8 +73,8 @@
 
         <div class="step-card">
           <i class="fa-solid fa-unlock-keyhole step-icon"></i>
-          <h3>2. Lås upp</h3>
-          <p>
+          <h3 data-i18n="how-step2">2. Lås upp</h3>
+          <p data-i18n="how-step2-desc">
             Använd vår app på plats vid cykelboden för att låsa upp din valda
             MTB via Bluetooth.
           </p>
@@ -70,8 +82,8 @@
 
         <div class="step-card">
           <i class="fa-solid fa-person-biking step-icon"></i>
-          <h3>3. Kör hårt</h3>
-          <p>
+          <h3 data-i18n="how-step3">3. Kör hårt</h3>
+          <p data-i18n="how-step3-desc">
             Ge dig ut på Vargöns grymma stigar. Njut av naturen och utrustningen
             i världsklass.
           </p>
@@ -79,8 +91,8 @@
 
         <div class="step-card">
           <i class="fa-solid fa-circle-check step-icon"></i>
-          <h3>4. Återlämna</h3>
-          <p>
+          <h3 data-i18n="how-step4">4. Återlämna</h3>
+          <p data-i18n="how-step4-desc">
             Ställ tillbaka cykeln på samma plats, lås via appen och du är klar!
           </p>
         </div>
@@ -88,21 +100,21 @@
     </section>
 
     <section id="bikes">
-      <h2>Våra Cyklar</h2>
-      <p>Vi har 8 grymma cyklar redo för stigarSna.</p>
+      <h2 data-i18n="bikes-title">Våra Cyklar</h2>
+      <p data-i18n="bikes-desc">Vi har 8 grymma cyklar redo för stigarna.</p>
 
       <div class="bike-grid" id="bike-grid"></div>
     </section>
 
     <!-- Frågor & Svar -->
     <section id="faq">
-      <h2>Vanliga frågor</h2>
+      <h2 data-i18n="faq-title">Vanliga frågor</h2>
 
       <div class="faq-container">
         <details>
-          <summary>Var hämtar jag cykeln?</summary>
+          <summary data-i18n="faq-question1">Var hämtar jag cykeln?</summary>
           <div class="faq-answer">
-            <p>
+            <p data-i18n="faq-answer1">
               Du hämtar och lämnar cykeln vid cykelboden. Exakt adress och
               vägbeskrivning får du i bekräftelsemailet när du bokar.
             </p>
@@ -110,9 +122,11 @@
         </details>
 
         <details>
-          <summary>Hur fungerar det med appen och låsen?</summary>
+          <summary data-i18n="faq-question2">
+            Hur fungerar det med appen och låsen?
+          </summary>
           <div class="faq-answer">
-            <p>
+            <p data-i18n="faq-answer2">
               När du har bokat får du en länk för att ladda ner vår app. När du
               är framme vid cykeln använder du appen för att låsa upp det smarta
               låset via Bluetooth. Enkelt och helt kontaktlöst!
@@ -121,26 +135,33 @@
         </details>
 
         <details>
-          <summary>Vad händer om jag får punktering i skogen?</summary>
+          <summary data-i18n="faq-question3">
+            Vad händer om jag får punktering i skogen?
+          </summary>
           <div class="faq-answer">
-            <p>
+            <p data-i18n="faq-answer3">
               Vid punktering kan du ringa numret som fanns i bekräftelsemailet.
             </p>
           </div>
         </details>
 
         <details>
-          <summary>Vad händer om jag kör vilse i skogen?</summary>
+          <summary data-i18n="faq-question4">
+            Vad händer om jag kör vilse i skogen?
+          </summary>
           <div class="faq-answer">
-            <p>Ring 112.</p>
+            <p data-i18n="faq-answer4">Ring 112.</p>
           </div>
         </details>
       </div>
     </section>
 
     <section id="location">
-      <h2>Hitta hit</h2>
-      <p style="margin-bottom: 2rem; color: var(--text-muted)">
+      <h2 data-i18n="location-title">Hitta hit</h2>
+      <p
+        data-i18n="location-desc"
+        style="margin-bottom: 2rem; color: var(--text-muted)"
+      >
         Du hämtar din mountainbike vid Spårcentralen på Hunneberg, strax utanför
         Vargön.
       </p>
@@ -156,8 +177,8 @@
       </div>
     </section>
     <section id="contact">
-      <h2>Hör av dig</h2>
-      <p id="contact-description">
+      <h2 data-i18n="contact-title">Hör av dig</h2>
+      <p data-i18n="contact-description" id="contact-description">
         Har du frågor om gruppbokningar, cyklarna eller vill du bara säga hej?
         Skicka ett meddelande!
       </p>
