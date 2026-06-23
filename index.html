@@ -162,8 +162,8 @@
         data-i18n="location-desc"
         style="margin-bottom: 2rem; color: var(--text-muted)"
       >
-        Du hämtar din mountainbike vid Spårcentralen på Hunneberg, strax utanför
-        Vargön.
+        Du hämtar din cykel vid Halle och Hunneberg AB på Hunneberg, strax
+        utanför Vargön.
       </p>
 
       <div class="map-container">
@@ -178,46 +178,51 @@
     </section>
     <section id="contact">
       <h2 data-i18n="contact-title">Hör av dig</h2>
-      <p data-i18n="contact-description" id="contact-description">
-        Har du frågor om gruppbokningar, cyklarna eller vill du bara säga hej?
-        Skicka ett meddelande!
+      <p data-i18n="contact-desc" id="contact-description">
+        Har du frågor om bokning, cyklar eller något annat? Kontakta oss via
+        e-post.
       </p>
 
       <form id="contact-form" action="" method="POST">
         <div class="form-group">
-          <label for="name">Namn *</label>
+          <label for="name" data-i18n="contact-name">Namn *</label>
           <input
             type="text"
             id="name"
             name="name"
             required
+            data-i18n-placeholder="contact-name-placeholder"
             placeholder="Ditt namn"
           />
         </div>
 
         <div class="form-group">
-          <label for="email">E-postadress *</label>
+          <label for="email" data-i18n="contact-email">E-postadress *</label>
           <input
             type="email"
             id="email"
             name="email"
             required
+            data-i18n-placeholder="contact-email-placeholder"
             placeholder="din.email@exempel.se"
           />
         </div>
 
         <div class="form-group">
-          <label for="message">Meddelande</label>
+          <label for="message" data-i18n="contact-message">Meddelande</label>
           <textarea
             id="message"
             name="message"
             rows="5"
             required
+            data-i18n-placeholder="contact-message-placeholder"
             placeholder="Vad funderar du på?"
           ></textarea>
         </div>
 
-        <button type="submit" class="btn form-btn">Skicka meddelande</button>
+        <button type="submit" class="btn form-btn" data-i18n="contact-submit">
+          Skicka meddelande
+        </button>
       </form>
     </section>
 
@@ -232,7 +237,7 @@
         </div> -->
 
         <div class="footer-col">
-          <h3>Kontakt</h3>
+          <h3 data-i18n="footer-contact-title">Kontakt</h3>
           <!-- <p>
             <i class="fa-solid fa-location-dot"></i> Hunneberg 123, <br />468 31
             Vargön
@@ -250,7 +255,7 @@
         </div>
 
         <div class="footer-col">
-          <h3>Följ oss</h3>
+          <h3 data-i18n="footer-follow-title">Följ oss</h3>
           <a
             href="https://www.instagram.com/vargonbikerental"
             class="social-link"
@@ -268,20 +273,29 @@
         </div>
 
         <div class="footer-col">
-          <h3>Samarbetspartners</h3>
+          <h3 data-i18n="footer-partners-title">Samarbetspartners</h3>
           <ul>
             <li>
-              <a href="https://hallehunneberg.se" target="_blank"
+              <a
+                href="https://hallehunneberg.se"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Hallehunneberg</a
               >
             </li>
             <li>
-              <a href="https://www.naturkartan.se" target="_blank"
+              <a
+                href="https://www.naturkartan.se"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Naturkartan</a
               >
             </li>
             <li>
-              <a href="https://www.hunnebergsgard.com" target="_blank"
+              <a
+                href="https://www.hunnebergsgard.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Hunnebergsgården</a
               >
             </li>
@@ -289,7 +303,9 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Vargön Bike Rental. Alla rättigheter reserverade.</p>
+        <p data-i18n="footer-copyright">
+          &copy; 2026 Vargön Bike Rental. Alla rättigheter reserverade.
+        </p>
       </div>
     </footer>
   </body>
