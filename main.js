@@ -359,6 +359,13 @@ if (langToggleBtn && langMenu) {
   langToggleBtn.addEventListener("click", (e) => {
     e.stopPropagation(); // Hindrar klicket från att "bubbla" upp
     langMenu.classList.toggle("show");
+
+    // NYTT: Få listan att scrollas in i bild automatiskt på mobilen
+    if (langMenu.classList.contains("show") && window.innerWidth <= 800) {
+      setTimeout(() => {
+        langMenu.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 50); // En pytteliten fördröjning så att webbläsaren hinner veckla ut listan först
+    }
   });
 
   // 2. Klick på ett språk i listan
