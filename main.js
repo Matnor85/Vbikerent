@@ -63,67 +63,63 @@ sections.forEach((section) => {
 const bikes = [
   {
     id: 1,
-    name: "Hardtail Trailblazer",
-    type: "Hardtail",
+    name: "TREK T300",
+    type: "Hybrid",
     desc: "Perfekt för snabba grusvägar och enklare skogsstigar. Lätt och följsam.",
-    size: "M (165-178 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIwUukYvmVW8Oc0jyYc77kwJMLwErfkV4Q7JPF42TAEw&s",
+    size: "one size",
+    image: "public/damcykel.jpg",
   },
   {
     id: 2,
-    name: "XC Carbon Flyer",
+    name: "MERIDA Big Nine 20",
     type: "Hardtail",
     desc: "Fjäderlätt kolfiberram för tävlingscyklisten. Maximerar kraftöverföringen i varje tramptag och flyger uppför backarna.",
-    size: "S (155-168 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLpmMAvhYIQbfagHaKV1_mZZOmsto5d9cMe_fDfh1qQA&s",
+    size: "L (177-190 cm)",
+    image: "public/cykel-L.jpg",
   },
   {
     id: 3,
-    name: "Enduro Beast",
-    type: "Full Suspension",
+    name: "MERIDA Big Nine 20",
+    type: "Hardtail",
     desc: "Heldämpad herre på täppan. Sväljer alla rötter, stenar och drop i Vargöns skogar.",
-    size: "M (170-183 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD1eSyexDrQJzRY4dwcUUG96QLTKo242xE2TTT5_8l9g&s",
+    size: "M (167-183 cm)",
+    image: "public/cykel-M.jpg",
   },
-  {
-    id: 4,
-    name: "Downhill Destroyer",
-    type: "Full Suspension",
-    desc: "Aggressiv geometri och massiv slaglängd. Specialbyggd för att krossa stenkistor och flyga nerför bikeparken.",
-    size: "L (180-195 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ7YUhWmNQLd16Gcyo7k6Ydb_PivkTJIMphubn9853aw&s",
-  },
-  {
-    id: 5,
-    name: "All-Mountain Explorer",
-    type: "Full Suspension",
-    desc: "Den perfekta allround-maskinen. Klättrar som en get uppför berget och ger grymt självförtroende på vägen ner.",
-    size: "XL (190-205 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPr6Jo0S1gvP5HKRJ5475qweIqez18T_7-U8omRxTXMg&s",
-  },
-  {
-    id: 6,
-    name: "Electric Mud-Trekker",
-    type: "e-MTB",
-    desc: "Utrustad med en kraftfull elmotor som ger dig den där extra knuffen uppför de brantaste branterna. Lekfull i alla terränger.",
-    size: "L (178-192 cm)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4Q64BsNED4vpAg7Z0ckJd0AaNmen93Nxs3np1wlT0w&s",
-  },
-  {
-    id: 7,
-    name: "Dirt Jumper Pro",
-    type: "Dirt/Street",
-    desc: "Avskalad och robust design, byggd för att ta stryk i pumptracken eller på dirtjumpsen. Maximerad för luftfärder.",
-    size: "One Size",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ4_asF5DtAUAF_Zeq37UUoB-uEd6jhckVdBFIRr2fSg&s",
-  },
+  // {
+  //   id: 4,
+  //   name: "Downhill Destroyer",
+  //   type: "Full Suspension",
+  //   desc: "Aggressiv geometri och massiv slaglängd. Specialbyggd för att krossa stenkistor och flyga nerför bikeparken.",
+  //   size: "L (180-195 cm)",
+  //   image: "public/damcykel.jpg",
+  // },
+  // {
+  //   id: 5,
+  //   name: "All-Mountain Explorer",
+  //   type: "Full Suspension",
+  //   desc: "Den perfekta allround-maskinen. Klättrar som en get uppför berget och ger grymt självförtroende på vägen ner.",
+  //   size: "XL (190-205 cm)",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPr6Jo0S1gvP5HKRJ5475qweIqez18T_7-U8omRxTXMg&s",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Electric Mud-Trekker",
+  //   type: "e-MTB",
+  //   desc: "Utrustad med en kraftfull elmotor som ger dig den där extra knuffen uppför de brantaste branterna. Lekfull i alla terränger.",
+  //   size: "L (178-192 cm)",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4Q64BsNED4vpAg7Z0ckJd0AaNmen93Nxs3np1wlT0w&s",
+  // },
+  // {
+  //   id: 7,
+  //   name: "Dirt Jumper Pro",
+  //   type: "Dirt/Street",
+  //   desc: "Avskalad och robust design, byggd för att ta stryk i pumptracken eller på dirtjumpsen. Maximerad för luftfärder.",
+  //   size: "One Size",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ4_asF5DtAUAF_Zeq37UUoB-uEd6jhckVdBFIRr2fSg&s",
+  // },
 ];
 
 function renderBikes() {
@@ -154,3 +150,33 @@ function renderBikes() {
 
 // Kör funktionen när filen laddas
 renderBikes();
+
+// ==========================================
+// SPRÅK & ÖVERSÄTTNINGAR (i18n)
+// ==========================================
+const translations = {
+  sv: {
+    "nav-start": "Start",
+    "nav-how": "Så funkar det",
+    "nav-bikes": "Våra Cyklar",
+    "nav-faq": "Frågor & Svar",
+    "nav-location": "Hitta hit",
+    "nav-contact": "Kontakt",
+    "hero-title": "Ett äventyr på berget.",
+    "hero-desc":
+      "Hyr moderna, nyservade mountainbikes direkt via mobilen. Dygnet runt.",
+    "hero-btn": "Boka din cykel nu",
+  },
+  en: {
+    "nav-start": "Home",
+    "nav-how": "How it works",
+    "nav-bikes": "Our Bikes",
+    "nav-faq": "Questions & Answers",
+    "nav-location": "Find Us",
+    "nav-contact": "Contact",
+    "hero-title": "An adventure on the mountain.",
+    "hero-desc":
+      "Rent modern, newly serviced mountain bikes directly via your phone. 24/7.",
+    "hero-btn": "Book your bike now",
+  },
+};

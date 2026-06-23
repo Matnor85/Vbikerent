@@ -89,9 +89,9 @@ header {
 }
 
 .logo-pic {
-  height: 60px;
+  height: 100px;
   width: auto;
-  border-radius: 50%;
+  /* border-radius: 10%; */
   object-fit: cover;
   margin-right: 0.5rem;
 }
