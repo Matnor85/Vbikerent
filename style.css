@@ -10,7 +10,7 @@
   --text-muted: #cccccc; /* Grå text för brödtext/ikoner */
   --primary-color: #e63946; /* Din röda accentfärg */
   --border-color: #333;
-  --nav-color: rgba(69, 72, 78, 0.652); /* För navigationens bakgrundsfärg */
+  --nav-color: rgb(69, 72, 78); /* För navigationens bakgrundsfärg */
   --nav-link-color: #f5f5f5; /* För navigationens länkar */
   --logo-color: #f5f5f5; /* För logotypen */
   --button-color: #1e7a0a; /* För knappar */
