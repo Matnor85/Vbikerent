@@ -395,12 +395,6 @@ summary::-webkit-details-marker {
   display: block; /* Tar bort det lilla fula glappet som ibland uppstår i botten */
 }
 
-/* På mobiler är det skönt om kartan inte är fullt lika hög */
-@media (max-width: 800px) {
-  .map-container iframe {
-    height: 300px;
-  }
-}
 /* ==========================================
    SEKTION 6: KONTAKT
    ========================================== */
@@ -560,7 +554,7 @@ footer {
     transition: left 0.4s ease;
     list-style: none;
     overflow-y: auto; /* Låter dig scrolla i menyn */
-    padding-top: 5rem; /* Luft i toppen så inget hamnar bakom loggan */
+    padding-top: 3rem; /* Luft i toppen så inget hamnar bakom loggan */
     padding-bottom: 2rem; /* Luft i botten */
   }
 
@@ -589,7 +583,8 @@ footer {
 
   /* Skapar lite luft ovanför knappen i mobilen */
   .nav-lang {
-    margin-top: 1rem;
+    align-items: center;
+    margin-top: 0.8rem;
     margin-bottom: 2rem;
   }
 
@@ -599,7 +594,7 @@ footer {
     top: 0;
     left: 0;
     transform: none;
-    margin-top: 0.5rem; /* Flyttar upp språken mycket närmare knappen! */
+    margin-top: 0.4rem; /* Flyttar upp språken mycket närmare knappen! */
     padding: 0; /* Rensar bort osynlig stoppning */
     background: transparent;
     border: none;
@@ -617,5 +612,12 @@ footer {
   nav ul .lang-menu li a {
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+/* På mobiler är det skönt om kartan inte är fullt lika hög */
+@media (max-width: 800px) {
+  .map-container iframe {
+    height: 300px;
   }
 }
