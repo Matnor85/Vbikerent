@@ -306,6 +306,7 @@ nav a:hover {
   object-fit: fill;
   border-radius: var(--border-radius-sm);
   margin-bottom: 1.5rem;
+  padding-top: 1.3rem;
 }
 .bike-badge {
   position: absolute;
@@ -314,8 +315,8 @@ nav a:hover {
   background-color: #222;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  padding: 0.2rem 0.6rem;
-  font-size: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 20px;
   text-transform: uppercase;
