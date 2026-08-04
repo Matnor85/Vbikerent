@@ -149,6 +149,7 @@ const translations = {
     "nav-faq": "Frågor & Svar",
     "nav-location": "Hitta hit",
     "nav-contact": "Kontakt",
+    "nav-villkor": "Villkor",
     // Hero-sektion
     "hero-title": "Ett äventyr på berget.",
     "hero-desc":
@@ -168,6 +169,10 @@ const translations = {
     "how-step4": "Återlämna",
     "how-step4-desc":
       "Återlämna cykeln på samma plats, lås via appen och du är klar!",
+    "how-book-title": "Boka via appen MOQO",
+    "how-book-desc":
+      "Ladda ner appen, skapa ett konto och skanna QR-koden på cykeln – eller välj cykel i listan.",
+    "download-title": "Ladda ner appen",
     // Our Bikes
     "bikes-title": "Våra Cyklar",
     "bikes-desc": "Vi har 8 grymma cyklar redo för stigarna.",
@@ -194,6 +199,14 @@ const translations = {
     "location-title": "Hitta hit",
     "location-desc":
       "Du hämtar din cykel vid Halle och Hunneberg AB på Hunneberg, strax utanför Vargön.",
+    "location-intro":
+      "Vi finns på Hunneberg, strax utanför Vargön. Du hämtar cykeln på en av våra två lokaler i området.",
+    "location-badge-app": "Boka i appen",
+    "location-badge-reception": "Boka i receptionen",
+    "location1-desc": "Självbetjäning dygnet runt – hyr själv via appen MOQO.",
+    "location2-desc":
+      "Hyr och boka cykeln direkt i receptionen på Hunnebergsgård.",
+    "location2-how": "Kontakta receptionen:",
     // Kontakt
     "contact-title": "Hör av dig",
     "contact-desc":
@@ -220,6 +233,7 @@ const translations = {
     "nav-faq": "Questions & Answers",
     "nav-location": "Find Us",
     "nav-contact": "Contact",
+    "nav-villkor": "Terms",
     // Hero Section
     "hero-title": "An adventure on the mountain.",
     "hero-desc":
@@ -238,6 +252,10 @@ const translations = {
     "how-step4": "Return",
     "how-step4-desc":
       "Return the bike at the same location, lock it via the app, and you're done!",
+    "how-book-title": "Book with the MOQO app",
+    "how-book-desc":
+      "Download the app, create an account and scan the QR code on the bike – or choose a bike from the list.",
+    "download-title": "Download the app",
     // Our Bikes
     "bikes-title": "Our Bikes",
     "bikes-desc": "We have 8 awesome bikes ready for the trails.",
@@ -260,6 +278,15 @@ const translations = {
     "location-title": "Find Us",
     "location-desc":
       "You can pick up your bike at Halle och Hunneberg AB on Hunneberg, just outside Vargön.",
+    "location-intro":
+      "We're located on Hunneberg, just outside Vargön. You pick up the bike at one of our two premises in the area.",
+    "location-badge-app": "Book in the app",
+    "location-badge-reception": "Book at reception",
+    "location1-desc":
+      "Self-service around the clock – rent on your own via the MOQO app.",
+    "location2-desc":
+      "Rent and book the bike directly at the Hunnebergsgård reception.",
+    "location2-how": "Contact reception:",
     // Contact
     "contact-title": "Get in Touch",
     "contact-desc":
@@ -285,6 +312,7 @@ const translations = {
     "nav-faq": "Fragen & Antworten",
     "nav-location": "Finde uns",
     "nav-contact": "Kontakt",
+    "nav-villkor": "Bedingungen",
     // Hero Section
     "hero-title": "Ein Abenteuer auf dem Berg.",
     "hero-desc":
@@ -304,6 +332,10 @@ const translations = {
     "how-step4": "Zurückgeben",
     "how-step4-desc":
       "Geben Sie das Fahrrad an derselben Stelle zurück, sperren Sie es über die App und Sie sind fertig!",
+    "how-book-title": "Mit der MOQO-App buchen",
+    "how-book-desc":
+      "Lade die App herunter, erstelle ein Konto und scanne den QR-Code am Fahrrad – oder wähle ein Fahrrad aus der Liste.",
+    "download-title": "App herunterladen",
     // Our Bikes
     "bikes-title": "Unsere Fahrräder",
     "bikes-desc": "Wir haben 8 großartige Fahrräder bereit für die Pfade.",
@@ -326,6 +358,15 @@ const translations = {
     "location-title": "Finde uns",
     "location-desc":
       "Du holst dein Fahrrad bei Halle och Hunneberg AB auf Hunneberg ab, direkt außerhalb von Vargön.",
+    "location-intro":
+      "Wir befinden uns auf Hunneberg, direkt außerhalb von Vargön. Du holst das Fahrrad an einem unserer beiden Standorte im Gebiet ab.",
+    "location-badge-app": "In der App buchen",
+    "location-badge-reception": "An der Rezeption buchen",
+    "location1-desc":
+      "Selbstbedienung rund um die Uhr – miete selbstständig über die MOQO-App.",
+    "location2-desc":
+      "Miete und buche das Fahrrad direkt an der Rezeption von Hunnebergsgård.",
+    "location2-how": "Rezeption kontaktieren:",
     // Kontakt
     "contact-title": "Melde dich bei uns",
     "contact-desc":

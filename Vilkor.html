@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyresvillkor – Vargön Bike Rental</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Sidspecifik styling för villkorssidan */
+      .terms-page {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 9rem 1.5rem 4rem;
+      }
+
+      .terms-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        transition: color 0.3s;
+      }
+      .terms-back:hover {
+        color: var(--primary-color);
+      }
+
+      .terms-page h1 {
+        font-size: clamp(2rem, 4vw + 1rem, 2.8rem);
+        margin-bottom: 0.5rem;
+      }
+
+      .terms-contact {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+      }
+      .terms-contact a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+      .terms-contact a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Highlight-ruta för deposition + GPS */
+      .terms-box {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-left: 4px solid var(--primary-color);
+        border-radius: var(--border-radius-lg);
+        padding: 1.5rem 1.75rem;
+        margin-bottom: 2.5rem;
+      }
+      .terms-box h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      .terms-box p {
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+        display: flex;
+        gap: 0.75rem;
+      }
+      .terms-box p:last-child {
+        margin-bottom: 0;
+      }
+      .terms-box i {
+        color: var(--primary-color);
+        margin-top: 0.25rem;
+      }
+      .terms-box strong {
+        color: var(--text-color);
+      }
+
+      .terms-list {
+        padding-left: 1.4rem;
+        margin-bottom: 2.5rem;
+      }
+      .terms-list li {
+        margin-bottom: 1rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        padding-left: 0.4rem;
+      }
+
+      .terms-accept {
+        font-style: italic;
+        color: var(--text-color);
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+      }
+
+      /* Språkblock: visa bara det aktiva */
+      .lang-block {
+        display: none;
+      }
+      .lang-block.active {
+        display: block;
+      }
+
+      /* Enklare header på undersidan */
+      .subpage-header nav {
+        margin-right: 0;
+      }
+      @media (max-width: 800px) {
+        .subpage-header .logo p {
+          font-size: 1.1rem;
+        }
+        .terms-page {
+          padding-top: 8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="subpage-header">
+      <div class="logo">
+        <a href="index.html#hero"
+          ><img
+            class="logo-pic"
+            src="public/bild.png"
+            alt="Vargön Bike Rental logga"
+        /></a>
+        <p>Vargön Bike Rental</p>
+      </div>
+
+      <nav>
+        <ul id="nav-menu">
+          <li>
+            <a href="index.html#hero" class="terms-back" id="back-link">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Tillbaka till start</span>
+            </a>
+          </li>
+          <li class="nav-lang">
+            <div class="lang-dropdown">
+              <button id="lang-toggle" class="lang-btn">
+                <i class="fa-solid fa-globe"></i>
+                <span id="lang-text">SV</span>
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 0.7em"
+                ></i>
+              </button>
+              <ul id="lang-menu" class="lang-menu">
+                <li><a href="#" data-lang="sv">Svenska (SV)</a></li>
+                <li><a href="#" data-lang="en">English (EN)</a></li>
+                <li><a href="#" data-lang="de">Deutsch (DE)</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="terms-page">
+      <!-- ============ SVENSKA ============ -->
+      <div class="lang-block active" data-block="sv">
+        <h1>Hyresvillkor</h1>
+        <p class="terms-contact">
+          Vargön Bike Rental AB<br />
+          Telefon: <a href="tel:+46731840333">+46 731 840 333</a>,
+          <a href="tel:+46730376584">+46 730 376 584</a><br />
+          E-post:
+          <a href="mailto:info@vargonbikerental.se">info@vargonbikerental.se</a>
+        </p>
+
+        <div class="terms-box">
+          <h2>Viktigt att veta</h2>
+          <p>
+            <i class="fa-solid fa-coins"></i>
+            <span
+              ><strong>Deposition:</strong> Vi tar ut en depositionsavgift på
+              300 SEK vid uthyrning. Beloppet återbetalas när cykeln lämnats
+              tillbaka i fullgott skick.</span
+            >
+          </p>
+          <p>
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span
+              ><strong>GPS:</strong> Samtliga cyklar är utrustade med GPS och
+              kan spåras.</span
+            >
+          </p>
+        </div>
+
+        <ol class="terms-list">
+          <li>
+            Hyrestagaren bekräftar att denne kan framföra cykel på ett säkert
+            sätt.
+          </li>
+          <li>Cykeln används helt på egen risk.</li>
+          <li>Hjälm skall användas.</li>
+          <li>
+            Cykeln får inte användas under påverkan av alkohol, droger eller
+            andra berusningsmedel.
+          </li>
+          <li>Hyrestagaren ansvarar för cykeln under hela hyresperioden.</li>
+          <li>Cykeln skall alltid vara låst när den lämnas utan uppsikt.</li>
+          <li>
+            Skador, olyckor eller stöld ska omedelbart anmälas till polis, och
+            en kopia av anmälan ska överlämnas till Vargön Bike Rental AB.
+          </li>
+          <li>
+            Hyrestagaren ansvarar för skador som uppstår genom oaktsamhet,
+            vårdslöshet eller användning som strider mot detta avtal.
+          </li>
+          <li>
+            Uthyraren ansvarar inte för personskador, olyckor, förlorade
+            tillhörigheter eller andra kostnader som uppstår i samband med
+            användningen av cykeln.
+          </li>
+          <li>
+            Cykeln skall återlämnas i samma skick som vid utlämningen, bortsett
+            från normalt slitage. Cykeln skall vara fri från kraftig smuts vid
+            återlämning.
+          </li>
+          <li>
+            Vid trasigt eller skadat lås debiteras del av eller kostnad för ett
+            nytt lås.
+          </li>
+          <li>
+            Vid borttappad eller skadad cykelhjälm debiteras en avgift om 450
+            SEK.
+          </li>
+          <li>
+            Om cykeln skadas genom oaktsamhet, vårdslöshet eller användning i
+            strid med detta avtal ansvarar hyrestagaren för
+            reparationskostnaden. Kostnaden fastställs genom offert från
+            cykelverkstad eller annan fackman.
+          </li>
+          <li>
+            Vid förlorad eller stulen cykel ansvarar hyrestagaren för kostnaden
+            motsvarande cykelns marknadsvärde eller kostnaden för att ersätta
+            cykeln med en likvärdig modell.
+          </li>
+        </ol>
+
+        <p class="terms-accept">
+          Genom att hyra en cykel bekräftar du att du har tagit del av och
+          accepterat samtliga villkor i detta avtal.
+        </p>
+      </div>
+
+      <!-- ============ ENGLISH ============ -->
+      <div class="lang-block" data-block="en">
+        <h1>Rental terms</h1>
+        <p class="terms-contact">
+          Vargön Bike Rental AB<br />
+          Phone: <a href="tel:+46731840333">+46 731 840 333</a>,
+          <a href="tel:+46730376584">+46 730 376 584</a><br />
+          Email:
+          <a href="mailto:info@vargonbikerental.se">info@vargonbikerental.se</a>
+        </p>
+
+        <div class="terms-box">
+          <h2>Good to know</h2>
+          <p>
+            <i class="fa-solid fa-coins"></i>
+            <span
+              ><strong>Deposit:</strong> A deposit of 300 SEK is charged when
+              you rent. The amount is refunded once the bicycle has been
+              returned in good condition.</span
+            >
+          </p>
+          <p>
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span
+              ><strong>GPS:</strong> All bicycles are equipped with GPS and can
+              be tracked.</span
+            >
+          </p>
+        </div>
+
+        <ol class="terms-list">
+          <li>
+            The renter confirms that they are able to ride a bicycle safely.
+          </li>
+          <li>The bicycle is used entirely at the renter's own risk.</li>
+          <li>A helmet must be worn.</li>
+          <li>
+            The bicycle must not be used under the influence of alcohol, drugs
+            or other intoxicating substances.
+          </li>
+          <li>
+            The renter is responsible for the bicycle during the entire rental
+            period.
+          </li>
+          <li>The bicycle must always be locked when left unattended.</li>
+          <li>
+            Damage, accidents or theft must be reported immediately to the
+            police, and a copy of the report must be provided to Vargön Bike
+            Rental AB.
+          </li>
+          <li>
+            The renter is responsible for damage caused by negligence,
+            carelessness or use contrary to this agreement.
+          </li>
+          <li>
+            The rental company is not responsible for personal injuries,
+            accidents, lost belongings or other costs arising in connection with
+            the use of the bicycle.
+          </li>
+          <li>
+            The bicycle must be returned in the same condition as when handed
+            over, except for normal wear and tear. The bicycle must be free from
+            heavy dirt when returned.
+          </li>
+          <li>If the key is lost, a fee of 200 SEK will be charged.</li>
+          <li>
+            If the bicycle lock is lost or damaged, a fee of 400 SEK will be
+            charged.
+          </li>
+          <li>
+            If the bicycle helmet is lost or damaged, a fee of 450 SEK will be
+            charged.
+          </li>
+          <li>
+            If the bicycle is damaged through negligence, carelessness or use
+            contrary to this agreement, the renter is responsible for the repair
+            cost. The cost is determined by a quotation from a bicycle workshop
+            or another qualified professional.
+          </li>
+          <li>
+            If the bicycle is lost or stolen, the renter is responsible for the
+            cost corresponding to the bicycle's market value or the cost of
+            replacing the bicycle with an equivalent model.
+          </li>
+        </ol>
+
+        <p class="terms-accept">
+          By renting a bicycle, you confirm that you have read and accepted all
+          the terms and conditions of this agreement.
+        </p>
+      </div>
+
+      <!-- ============ DEUTSCH ============ -->
+      <div class="lang-block" data-block="de">
+        <h1>Mietbedingungen</h1>
+        <p class="terms-contact">
+          Vargön Bike Rental AB<br />
+          Telefon: <a href="tel:+46731840333">+46 731 840 333</a>,
+          <a href="tel:+46730376584">+46 730 376 584</a><br />
+          E-Mail:
+          <a href="mailto:info@vargonbikerental.se">info@vargonbikerental.se</a>
+        </p>
+
+        <div class="terms-box">
+          <h2>Wichtig zu wissen</h2>
+          <p>
+            <i class="fa-solid fa-coins"></i>
+            <span
+              ><strong>Kaution:</strong> Bei der Anmietung wird eine Kaution von
+              300 SEK erhoben. Der Betrag wird zurückerstattet, sobald das
+              Fahrrad in einwandfreiem Zustand zurückgegeben wurde.</span
+            >
+          </p>
+          <p>
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span
+              ><strong>GPS:</strong> Alle Fahrräder sind mit GPS ausgestattet
+              und können geortet werden.</span
+            >
+          </p>
+        </div>
+
+        <ol class="terms-list">
+          <li>Der Mieter bestätigt, dass er ein Fahrrad sicher fahren kann.</li>
+          <li>
+            Die Benutzung des Fahrrads erfolgt ausschließlich auf eigene Gefahr.
+          </li>
+          <li>Das Tragen eines Helms ist verpflichtend.</li>
+          <li>
+            Das Fahrrad darf nicht unter dem Einfluss von Alkohol, Drogen oder
+            anderen berauschenden Mitteln benutzt werden.
+          </li>
+          <li>
+            Der Mieter ist während der gesamten Mietdauer für das Fahrrad
+            verantwortlich.
+          </li>
+          <li>
+            Das Fahrrad muss stets abgeschlossen werden, wenn es unbeaufsichtigt
+            abgestellt wird.
+          </li>
+          <li>
+            Schäden, Unfälle oder Diebstahl sind unverzüglich der Polizei zu
+            melden, und eine Kopie der Anzeige ist an Vargön Bike Rental AB zu
+            übergeben.
+          </li>
+          <li>
+            Der Mieter haftet für Schäden, die durch Fahrlässigkeit,
+            unsachgemäße Behandlung oder eine Nutzung entgegen diesem Vertrag
+            entstehen.
+          </li>
+          <li>
+            Der Vermieter haftet nicht für Personenschäden, Unfälle, verlorene
+            Gegenstände oder sonstige Kosten, die im Zusammenhang mit der
+            Nutzung des Fahrrads entstehen.
+          </li>
+          <li>
+            Das Fahrrad ist in demselben Zustand zurückzugeben, in dem es
+            übernommen wurde, abgesehen von normalem Verschleiß. Bei der
+            Rückgabe muss das Fahrrad frei von starker Verschmutzung sein.
+          </li>
+          <li>
+            Bei Verlust des Schlüssels wird eine Gebühr von 200 SEK berechnet.
+          </li>
+          <li>
+            Bei Verlust oder Beschädigung des Fahrradschlosses wird eine Gebühr
+            von 400 SEK berechnet.
+          </li>
+          <li>
+            Bei Verlust oder Beschädigung des Fahrradhelms wird eine Gebühr von
+            450 SEK berechnet.
+          </li>
+          <li>
+            Wird das Fahrrad durch Fahrlässigkeit, unsachgemäße Behandlung oder
+            eine Nutzung entgegen diesem Vertrag beschädigt, trägt der Mieter
+            die Reparaturkosten. Die Kosten werden anhand eines
+            Kostenvoranschlags einer Fahrradwerkstatt oder eines anderen
+            Fachbetriebs festgelegt.
+          </li>
+          <li>
+            Bei Verlust oder Diebstahl des Fahrrads haftet der Mieter für die
+            Kosten in Höhe des Marktwerts des Fahrrads oder für die Kosten der
+            Ersatzbeschaffung eines gleichwertigen Modells.
+          </li>
+        </ol>
+
+        <p class="terms-accept">
+          Mit der Anmietung eines Fahrrads bestätigst du, dass du alle
+          Bedingungen dieser Vereinbarung gelesen hast und akzeptierst.
+        </p>
+      </div>
+    </main>
+
+    <script>
+      // Etiketter som ligger utanför språkblocken (tillbaka-länken)
+      const backLabels = {
+        sv: "Tillbaka till start",
+        en: "Back to start",
+        de: "Zurück zur Startseite",
+      };
+
+      const langToggleBtn = document.getElementById("lang-toggle");
+      const langMenu = document.getElementById("lang-menu");
+      const langText = document.getElementById("lang-text");
+      const backText = document.querySelector("#back-link span");
+      const blocks = document.querySelectorAll(".lang-block");
+
+      // Öppna/stäng språkmenyn
+      langToggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        langMenu.classList.toggle("show");
+      });
+
+      // Byt språk = visa rätt block
+      document.querySelectorAll(".lang-menu a").forEach((option) => {
+        option.addEventListener("click", (e) => {
+          e.preventDefault();
+          const lang = option.getAttribute("data-lang");
+
+          blocks.forEach((block) => {
+            block.classList.toggle(
+              "active",
+              block.getAttribute("data-block") === lang,
+            );
+          });
+
+          langText.innerText = lang.toUpperCase();
+          if (backText) backText.innerText = backLabels[lang];
+          document.documentElement.lang = lang;
+          langMenu.classList.remove("show");
+        });
+      });
+
+      // Stäng menyn vid klick utanför
+      document.addEventListener("click", (e) => {
+        if (!langToggleBtn.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>
