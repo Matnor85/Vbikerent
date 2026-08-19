@@ -188,6 +188,9 @@ const translations = {
     "faq-question2": "Hur fungerar det med appen och låsen?",
     "faq-answer2":
       "När du har bokat får du en länk för att ladda ner vår app. När du är framme vid cykeln använder du appen för att låsa upp det smarta låset via Bluetooth. Enkelt och helt kontaktlöst!",
+    "faq-guide-intro": "Följ vår guide:",
+    "faq-guide-label": "Manual – lånecyklar",
+    "faq-guide-file": "public/manual-lanecyklar-vargon-bike-rental.pdf",
     // Q3
     "faq-question3": "Vad händer om jag får problem i samband med min bokning?",
     "faq-answer3": "Skicka oss ett mail så hjälper vi dig.",
@@ -206,7 +209,7 @@ const translations = {
     // Hitta hit
     "location-title": "Hitta hit",
     "location-intro":
-      "Vi finns på Hunneberg, strax utanför Vargön. Du hämtar cykeln på en av våra två lokaler i området.",
+      "Vi finns på Hunneberg i Vargön, strax utanför Vänersborg. Du hämtar cykeln på en av våra två lokaler i området.",
     "location-badge-app": "Boka i appen",
     "location-badge-reception": "Boka i receptionen",
     "location1-desc": "Självbetjäning dygnet runt – hyr själv via appen MOQO.",
@@ -275,6 +278,9 @@ const translations = {
     "faq-question2": "How does the app and locks work?",
     "faq-answer2":
       "After booking, you will receive a link to download our app. When you arrive at the bike, use the app to unlock the smart lock via Bluetooth. Simple and completely contactless!",
+    "faq-guide-intro": "Follow our guide:",
+    "faq-guide-label": "Manual – bike rental",
+    "faq-guide-file": "public/manual-lanecyklar-vargon-bike-rental.pdf",
     "faq-question3": "What happens if I have a problem with my booking?",
     "faq-answer3": "Send us an email and we'll help you.",
     "faq-question5": "What happens if I have a problem during my rental?",
@@ -291,7 +297,7 @@ const translations = {
     // Find Us
     "location-title": "Find Us",
     "location-intro":
-      "We're located on Hunneberg, just outside Vargön. You can pick up your bike at one of our two locations in the area.",
+      "We're located on Hunneberg in Vargön, just outside Vänersborg. You can pick up your bike at one of our two locations in the area.",
     "location-badge-app": "Book in the app",
     "location-badge-reception": "Book at reception",
     "location1-desc":
@@ -361,6 +367,9 @@ const translations = {
     "faq-question2": "Wie funktionieren die App und die Schlösser?",
     "faq-answer2":
       "Nach der Buchung erhältst du einen Link zum Herunterladen unserer App. Wenn du am Fahrrad angekommen bist, benutze die App, um das intelligente Schloss über Bluetooth zu entsperren. Einfach und völlig kontaktlos!",
+    "faq-guide-intro": "Folge unserer Anleitung:",
+    "faq-guide-label": "Anleitung – Leihfahrräder",
+    "faq-guide-file": "public/manual-lanecyklar-vargon-bike-rental.pdf",
     "faq-question3":
       "Was passiert, wenn ich ein Problem mit meiner Buchung habe?",
     "faq-answer3": "Schicke uns eine E-Mail, wir helfen dir.",
@@ -382,7 +391,7 @@ const translations = {
     // Hitta hit
     "location-title": "Finde uns",
     "location-intro":
-      "Wir befinden uns auf Hunneberg, direkt außerhalb von Vargön. Du holst dein Fahrrad an einem unserer zwei Standorte in der Umgebung ab.",
+      "Wir befinden uns auf Hunneberg in Vargön, direkt außerhalb von Vänersborg. Du holst dein Fahrrad an einem unserer zwei Standorte in der Umgebung ab.",
     "location-badge-app": "In der App buchen",
     "location-badge-reception": "An der Rezeption buchen",
     "location1-desc":
@@ -476,12 +485,23 @@ function changeLanguage(lang) {
     }
   });
 
-  // 2. LÄGG TILL DETTA: Byter ut alla placeholders i formuläret
+  // 2. Byter ut alla placeholders i formuläret
   const placeholders = document.querySelectorAll("[data-i18n-placeholder]");
   placeholders.forEach((element) => {
     const key = element.getAttribute("data-i18n-placeholder");
     if (translations[lang] && translations[lang][key]) {
       element.placeholder = translations[lang][key];
+    }
+  });
+
+  // 2b. Byter ut href på nedladdningslänkar (t.ex. guider/manualer per språk).
+  // Lägg till fler filer per språk i "translations" ovan (samma nyckel, t.ex.
+  // "faq-guide-file") om ni tar fram översatta manualer i framtiden.
+  const hrefElements = document.querySelectorAll("[data-i18n-href]");
+  hrefElements.forEach((element) => {
+    const key = element.getAttribute("data-i18n-href");
+    if (translations[lang] && translations[lang][key]) {
+      element.href = translations[lang][key];
     }
   });
 

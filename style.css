@@ -452,6 +452,40 @@ summary::-webkit-details-marker {
   color: var(--text-muted);
 }
 
+/* Länk till nedladdningsbar guide/manual i ett FAQ-svar */
+.faq-guide-intro {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.faq-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.faq-doc-link:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.faq-doc-link i {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
 /* Nästlade frågor inuti ett FAQ-svar (t.ex. "Vad händer om jag får problem
    under min hyrtid?"), istället för att bara radbryta med <br /> */
 .faq-answer details.faq-sub {
@@ -483,9 +517,24 @@ summary::-webkit-details-marker {
   width: 100%;
 }
 
+.location-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.location-address i {
+  color: var(--primary-color);
+}
+
 .location-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
   gap: 2rem;
   width: 100%;
   max-width: var(--max-width);
@@ -493,9 +542,8 @@ summary::-webkit-details-marker {
 }
 
 .location-card {
-  position: relative;
   background-color: var(--card-bg);
-  padding: 2.5rem 2rem 2rem 2rem;
+  padding: 2rem;
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--border-color);
   text-align: left;
@@ -506,18 +554,13 @@ summary::-webkit-details-marker {
   font-size: 1.2rem;
 }
 
-.location-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #222;
-  border: 1px solid var(--primary-color);
+.location-tag {
   color: var(--primary-color);
-  padding: 0.4rem 0.6rem;
+  font-weight: 700;
   font-size: 0.85rem;
-  font-weight: bold;
-  border-radius: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
 .location-desc-text {
