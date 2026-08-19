@@ -230,10 +230,14 @@ nav a:hover {
   min-height: 100vh;
   justify-content: center;
   text-align: center;
+  /* "contain" (istället för "cover") gör att hela bilden ryms utan att
+     beskäras/zoomas in. "no-repeat" hindrar bilden från att upprepas i
+     eventuellt tomrum, och background-color fyller i det tomrummet med
+     sidans mörka temafärg istället för vitt/genomskinligt. */
   background:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://www.sveaskog.se/globalassets/bilder/jakt-fiske-och-friluftsliv/ekoparker/halle--och-hunneberg/halle-_20_26_20hunneberg-3.jpg")
-      center/cover;
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("public/IMG_1284.jpg") center/contain no-repeat;
+  background-color: var(--bg-color);
 }
 
 #hero h1 {
