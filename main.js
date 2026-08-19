@@ -157,18 +157,18 @@ const translations = {
     "hero-btn": "Boka din cykel nu",
     //How it works
     "how-title": "Så funkar det",
-    "how-step1": "Boka online",
+    "how-step1": "1. Boka direkt i appen",
     "how-step1-desc":
-      "Välj din cykel och datum direkt här på sidan. Betala snabbt och säkert. ",
-    "how-step2": "Lås upp",
+      "Välj din cykel och datum direkt i appen. Betala snabbt och säkert.",
+    "how-step2": "2. Lås upp",
     "how-step2-desc":
-      "Använd vår app på plats vid cykelboden för att låsa upp din valda cykel via Bluetooth. ",
-    "how-step3": "Kör hårt",
+      "Åtkomst till din bokade cykel med Bluetooth via vår app.",
+    "how-step3": "3. Kör hårt",
     "how-step3-desc":
-      "Ge dig ut på Vargöns grymma stigar. Njut av naturen och utrustningen i världsklass. ",
-    "how-step4": "Återlämna",
+      "Ge dig ut på Vargöns många stigar och vägar. Njut av naturen och skön cykling.",
+    "how-step4": "4. Återlämna",
     "how-step4-desc":
-      "Återlämna cykeln på samma plats, lås via appen och du är klar!",
+      "Ställ tillbaka cykeln på samma plats, lås via appen och du är klar!",
     "how-book-title": "Boka via appen MOQO",
     "how-book-desc":
       "Ladda ner appen, skapa ett konto och skanna QR-koden på cykeln – eller välj cykel i listan.",
@@ -183,22 +183,28 @@ const translations = {
     // Q1
     "faq-question1": "Var hämtar jag cykeln?",
     "faq-answer1":
-      "Du hämtar och lämnar cykeln vid cykelboden. Exakt adress och vägbeskrivning får du i bekräftelsemailet när du bokar.",
+      "Cyklarna står uppställda på Bergagården på Hunneberg, nedanför entrén till Besökscentret.",
     // Q2
     "faq-question2": "Hur fungerar det med appen och låsen?",
     "faq-answer2":
       "När du har bokat får du en länk för att ladda ner vår app. När du är framme vid cykeln använder du appen för att låsa upp det smarta låset via Bluetooth. Enkelt och helt kontaktlöst!",
     // Q3
-    "faq-question3": "Vad händer om jag får punktering i skogen?",
-    "faq-answer3":
-      "Vid punktering kan du ringa numret som fanns i bekräftelsemailet.",
-    // Q4
-    "faq-question4": "Vad händer om jag kör vilse i skogen?",
-    "faq-answer4": "Ring 112.",
+    "faq-question3": "Vad händer om jag får problem i samband med min bokning?",
+    "faq-answer3": "Skicka oss ett mail så hjälper vi dig.",
+    // Q5 (med nästlade underfrågor istället för <br />)
+    "faq-question5": "Vad händer om jag får problem under min hyrtid?",
+    "faq5-sub1-q":
+      "Jag har fått ett problem i starten av min hyrtid som utgör ett hinder för att komma iväg",
+    "faq5-sub1-a": "Ring något av telefonnumren som du finner på cykelstyret.",
+    "faq5-sub2-q": "Jag har fått ett problem som skyndsamt behöver åtgärdas",
+    "faq5-sub2-a": "Rapportera problemet i appen.",
+    "faq5-sub3-q": "Jag har fått ett problem som akut behöver åtgärdas",
+    "faq5-sub3-a": "Ring något av telefonnumren som du finner på cykelstyret.",
+    "faq5-sub4-q":
+      "Jag har fått problem och kan inte ta mig tillbaka till upphämtningsplatsen",
+    "faq5-sub4-a": "Ring något av telefonnumren som du finner på cykelstyret.",
     // Hitta hit
     "location-title": "Hitta hit",
-    "location-desc":
-      "Du hämtar din cykel vid Halle och Hunneberg AB på Hunneberg, strax utanför Vargön.",
     "location-intro":
       "Vi finns på Hunneberg, strax utanför Vargön. Du hämtar cykeln på en av våra två lokaler i området.",
     "location-badge-app": "Boka i appen",
@@ -241,20 +247,20 @@ const translations = {
     "hero-btn": "Book your bike now",
     // How it works
     "how-title": "How it works",
-    "how-step1-desc": "Choose your favorite bike and book it online.",
-    "how-step1": "Book online",
-    "how-step2": "Unlock",
-    "how-step2-desc":
-      "Use our app at the bike station to unlock your chosen bike via Bluetooth.",
-    "how-step3": "Ride hard",
+    "how-step1": "1. Book directly in the app",
+    "how-step1-desc":
+      "Choose your bike and date directly in the app. Pay quickly and securely.",
+    "how-step2": "2. Unlock",
+    "how-step2-desc": "Access your booked bike via Bluetooth through our app.",
+    "how-step3": "3. Ride hard",
     "how-step3-desc":
-      "Head out on Vargön's amazing trails. Enjoy the nature and world-class equipment.",
-    "how-step4": "Return",
+      "Head out on Vargön's many trails and roads. Enjoy the nature and great cycling.",
+    "how-step4": "4. Return",
     "how-step4-desc":
       "Return the bike at the same location, lock it via the app, and you're done!",
-    "how-book-title": "Book with the MOQO app",
+    "how-book-title": "Book via the MOQO app",
     "how-book-desc":
-      "Download the app, create an account and scan the QR code on the bike – or choose a bike from the list.",
+      "Download the app, create an account, and scan the QR code on the bike – or choose a bike from the list.",
     "download-title": "Download the app",
     // Our Bikes
     "bikes-title": "Our Bikes",
@@ -265,28 +271,34 @@ const translations = {
     "faq-title": "Frequently Asked Questions",
     "faq-question1": "Where do I pick up the bike?",
     "faq-answer1":
-      "You can pick up the bike at the bike station. Exact address and directions will be provided in the confirmation email when you book.",
+      "The bikes are parked at Bergagården on Hunneberg, below the entrance to the Visitor Center.",
     "faq-question2": "How does the app and locks work?",
     "faq-answer2":
       "After booking, you will receive a link to download our app. When you arrive at the bike, use the app to unlock the smart lock via Bluetooth. Simple and completely contactless!",
-    "faq-question3": "What happens if I get a flat tire in the forest?",
-    "faq-answer3":
-      "In case of a flat tire, you can call the number that was included in the confirmation email.",
-    "faq-question4": "What happens if I get lost in the forest?",
-    "faq-answer4": "Call 112.",
+    "faq-question3": "What happens if I have a problem with my booking?",
+    "faq-answer3": "Send us an email and we'll help you.",
+    "faq-question5": "What happens if I have a problem during my rental?",
+    "faq5-sub1-q":
+      "I've had a problem at the start of my rental that's stopping me from getting going",
+    "faq5-sub1-a": "Call one of the phone numbers found on the bike handlebar.",
+    "faq5-sub2-q": "I've had a problem that needs to be fixed quickly",
+    "faq5-sub2-a": "Report the problem in the app.",
+    "faq5-sub3-q": "I've had a problem that needs urgent attention",
+    "faq5-sub3-a": "Call one of the phone numbers found on the bike handlebar.",
+    "faq5-sub4-q":
+      "I've had a problem and can't get back to the pickup location",
+    "faq5-sub4-a": "Call one of the phone numbers found on the bike handlebar.",
     // Find Us
     "location-title": "Find Us",
-    "location-desc":
-      "You can pick up your bike at Halle och Hunneberg AB on Hunneberg, just outside Vargön.",
     "location-intro":
-      "We're located on Hunneberg, just outside Vargön. You pick up the bike at one of our two premises in the area.",
+      "We're located on Hunneberg, just outside Vargön. You can pick up your bike at one of our two locations in the area.",
     "location-badge-app": "Book in the app",
     "location-badge-reception": "Book at reception",
     "location1-desc":
-      "Self-service around the clock – rent on your own via the MOQO app.",
+      "Self-service around the clock – rent yourself via the MOQO app.",
     "location2-desc":
-      "Rent and book the bike directly at the Hunnebergsgård reception.",
-    "location2-how": "Contact reception:",
+      "Rent and book the bike directly at the reception at Hunnebergsgård.",
+    "location2-how": "Contact the reception:",
     // Contact
     "contact-title": "Get in Touch",
     "contact-desc":
@@ -312,7 +324,7 @@ const translations = {
     "nav-faq": "Fragen & Antworten",
     "nav-location": "Finde uns",
     "nav-contact": "Kontakt",
-    "nav-villkor": "Bedingungen",
+    "nav-villkor": "AGB",
     // Hero Section
     "hero-title": "Ein Abenteuer auf dem Berg.",
     "hero-desc":
@@ -320,22 +332,22 @@ const translations = {
     "hero-btn": "Buchen Sie Ihr Fahrrad jetzt",
     // How it works
     "how-title": "So funktioniert es",
-    "how-step1": "Online buchen",
+    "how-step1": "1. Direkt in der App buchen",
     "how-step1-desc":
-      "Wählen Sie Ihr Lieblingsfahrrad und buchen Sie es online.",
-    "how-step2": "Entsperren",
+      "Wähle dein Fahrrad und Datum direkt in der App. Bezahle schnell und sicher.",
+    "how-step2": "2. Entsperren",
     "how-step2-desc":
-      "Verwenden Sie unsere App am Fahrradständer, um Ihr gewähltes Fahrrad über Bluetooth zu entsperren.",
-    "how-step3": "Hart fahren",
+      "Zugang zu deinem gebuchten Fahrrad über Bluetooth via unserer App.",
+    "how-step3": "3. Hart fahren",
     "how-step3-desc":
-      "Gehen Sie auf Vargöns erstaunliche Pfade. Genießen Sie die Natur und die Weltklasse-Ausrüstung.",
-    "how-step4": "Zurückgeben",
+      "Erkunde Vargöns viele Pfade und Wege. Genieße die Natur und schönes Radfahren.",
+    "how-step4": "4. Zurückgeben",
     "how-step4-desc":
       "Geben Sie das Fahrrad an derselben Stelle zurück, sperren Sie es über die App und Sie sind fertig!",
-    "how-book-title": "Mit der MOQO-App buchen",
+    "how-book-title": "Buchen über die App MOQO",
     "how-book-desc":
       "Lade die App herunter, erstelle ein Konto und scanne den QR-Code am Fahrrad – oder wähle ein Fahrrad aus der Liste.",
-    "download-title": "App herunterladen",
+    "download-title": "Lade die App herunter",
     // Our Bikes
     "bikes-title": "Unsere Fahrräder",
     "bikes-desc": "Wir haben 8 großartige Fahrräder bereit für die Pfade.",
@@ -345,28 +357,39 @@ const translations = {
     "faq-title": "Häufige Fragen",
     "faq-question1": "Wo hole ich das Fahrrad ab?",
     "faq-answer1":
-      "Du holst und bringst das Fahrrad an der Fahrradstation ab. Die genaue Adresse und Wegbeschreibung erhältst du in der Bestätigungs-E-Mail, wenn du buchst.",
+      "Die Fahrräder stehen am Bergagården auf Hunneberg, unterhalb des Eingangs zum Besucherzentrum.",
     "faq-question2": "Wie funktionieren die App und die Schlösser?",
     "faq-answer2":
       "Nach der Buchung erhältst du einen Link zum Herunterladen unserer App. Wenn du am Fahrrad angekommen bist, benutze die App, um das intelligente Schloss über Bluetooth zu entsperren. Einfach und völlig kontaktlos!",
-    "faq-question3": "Was passiert, wenn ich im Wald eine Reifenpanne habe?",
-    "faq-answer3":
-      "Bei einer Reifenpanne kannst du die Nummer anrufen, die in der Bestätigungs-E-Mail angegeben war.",
-    "faq-question4": "Was passiert, wenn ich mich im Wald verirre?",
-    "faq-answer4": "Rufe 112 an.",
+    "faq-question3":
+      "Was passiert, wenn ich ein Problem mit meiner Buchung habe?",
+    "faq-answer3": "Schicke uns eine E-Mail, wir helfen dir.",
+    "faq-question5":
+      "Was passiert, wenn ich während meiner Mietzeit ein Problem habe?",
+    "faq5-sub1-q":
+      "Ich habe zu Beginn meiner Mietzeit ein Problem, das mich am Losfahren hindert",
+    "faq5-sub1-a":
+      "Rufe eine der Telefonnummern an, die du am Lenker des Fahrrads findest.",
+    "faq5-sub2-q": "Ich habe ein Problem, das schnell behoben werden muss",
+    "faq5-sub2-a": "Melde das Problem in der App.",
+    "faq5-sub3-q": "Ich habe ein Problem, das dringend behoben werden muss",
+    "faq5-sub3-a":
+      "Rufe eine der Telefonnummern an, die du am Lenker des Fahrrads findest.",
+    "faq5-sub4-q":
+      "Ich habe ein Problem und kann nicht zum Abholort zurückkehren",
+    "faq5-sub4-a":
+      "Rufe eine der Telefonnummern an, die du am Lenker des Fahrrads findest.",
     // Hitta hit
     "location-title": "Finde uns",
-    "location-desc":
-      "Du holst dein Fahrrad bei Halle och Hunneberg AB auf Hunneberg ab, direkt außerhalb von Vargön.",
     "location-intro":
-      "Wir befinden uns auf Hunneberg, direkt außerhalb von Vargön. Du holst das Fahrrad an einem unserer beiden Standorte im Gebiet ab.",
+      "Wir befinden uns auf Hunneberg, direkt außerhalb von Vargön. Du holst dein Fahrrad an einem unserer zwei Standorte in der Umgebung ab.",
     "location-badge-app": "In der App buchen",
     "location-badge-reception": "An der Rezeption buchen",
     "location1-desc":
-      "Selbstbedienung rund um die Uhr – miete selbstständig über die MOQO-App.",
+      "Selbstbedienung rund um die Uhr – miete selbst über die App MOQO.",
     "location2-desc":
       "Miete und buche das Fahrrad direkt an der Rezeption von Hunnebergsgård.",
-    "location2-how": "Rezeption kontaktieren:",
+    "location2-how": "Kontaktiere die Rezeption:",
     // Kontakt
     "contact-title": "Melde dich bei uns",
     "contact-desc":
