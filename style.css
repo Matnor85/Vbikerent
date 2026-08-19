@@ -23,6 +23,10 @@
   --border-radius-sm: 5px; /* Knappar och inputs */
   --border-radius-lg: 10px; /* Kort och stora rutor */
   --max-width: 1200px; /* Hur bred sidan får bli på stora skärmar */
+
+  /* Höjden på den fasta headern - används för att ankarlänkar (#booking-cta
+     m.fl.) inte ska hamna gömda bakom den. Justeras för mobil längre ner. */
+  --header-height: 132px;
 }
 
 /* ==========================================
@@ -50,6 +54,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Gör att ankarlänkar i menyn stannar under headern istället för bakom den */
+  scroll-margin-top: var(--header-height);
 }
 
 /* Allmänna knappar */
@@ -293,6 +299,10 @@ nav a:hover {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: 2rem;
+  /* #booking-cta ligger mitt inne i sektionen "how-it-works", inte högst
+     upp - utan denna hamnar rutan gömd bakom den fasta headern när man
+     klickar på en "Boka"-knapp som länkar hit. */
+  scroll-margin-top: var(--header-height);
 }
 
 .booking-cta-text {
@@ -745,12 +755,32 @@ footer {
    RESPONSIVITET (MOBIL & TABLET)
    ========================================== */
 @media (max-width: 800px) {
+  :root {
+    /* Headern är mindre på mobil (se nedan), så ankarlänkarna ska bara
+       kompensera för den mindre höjden */
+    --header-height: 78px;
+  }
+
   #hero h1 {
     font-size: 2.5rem;
   }
 
   section {
     padding: 5rem 1.5rem 3rem;
+  }
+
+  /* Gör headern mindre och mer kompakt på mobil */
+  header {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .logo-pic {
+    height: 48px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    gap: 8px;
   }
 
   /* Mobilmeny / Hamburgare */

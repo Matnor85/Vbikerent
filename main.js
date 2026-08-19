@@ -145,6 +145,7 @@ const translations = {
     // Navigation
     "nav-start": "Start",
     "nav-how": "Så funkar det",
+    "nav-download": "Ladda ner appen",
     "nav-bikes": "Våra Cyklar",
     "nav-faq": "Frågor & Svar",
     "nav-location": "Hitta hit",
@@ -238,6 +239,7 @@ const translations = {
     // Navigation
     "nav-start": "Home",
     "nav-how": "How it works",
+    "nav-download": "Download the app",
     "nav-bikes": "Our Bikes",
     "nav-faq": "Questions & Answers",
     "nav-location": "Find Us",
@@ -326,6 +328,7 @@ const translations = {
     // Navigation
     "nav-start": "Startseite",
     "nav-how": "So funktioniert es",
+    "nav-download": "Lade die App herunter",
     "nav-bikes": "Unsere Fahrräder",
     "nav-faq": "Fragen & Antworten",
     "nav-location": "Finde uns",
@@ -526,13 +529,13 @@ function renderBikes() {
     const bikeCardHTML = `
       <div class="bike-card" data-id="${bike.id}">
         <div class="bike-badge">${bike.type}</div>
-        
+
         <img src="${bike.image}" alt="${bike.name}" class="bike-image">
-        
+
         <h3>${bike.name}</h3>
         <p>${currentDesc}</p>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">${sizeLabel} ${bike.size}</p>
-        <a href="#" class="btn" style="padding: 0.5rem 1rem; margin-top: 1rem;">${bookBtnText}</a>
+        <a href="#booking-cta" class="btn" style="padding: 0.5rem 1rem; margin-top: 1rem;">${bookBtnText}</a>
       </div>
     `;
 

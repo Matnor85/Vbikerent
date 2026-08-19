@@ -27,7 +27,10 @@
         <ul id="nav-menu">
           <li><a href="#hero" data-i18n="nav-start">Start</a></li>
           <li><a href="#how-it-works" data-i18n="nav-how">Så funkar det</a></li>
-          <li><a href="#bikes" data-i18n="nav-bikes">Våra Cyklar</a></li>
+          <li>
+            <a href="#booking-cta" data-i18n="nav-download">Ladda ner appen</a>
+          </li>
+          <li><a href="#bikes" data-i18n="nav-bikes">Våra Cykelmodeller</a></li>
           <li><a href="#faq" data-i18n="nav-faq">Frågor & Svar</a></li>
           <li><a href="#location" data-i18n="nav-location">Hitta hit</a></li>
           <li><a href="#contact" data-i18n="nav-contact">Kontakt</a></li>
@@ -65,7 +68,9 @@
       <p data-i18n="hero-desc">
         Hyr moderna, nyservade mountainbikes direkt via mobilen. Dygnet runt.
       </p>
-      <a href="#bikes" class="btn" data-i18n="hero-btn">Boka din cykel nu</a>
+      <a href="#booking-cta" class="btn" data-i18n="hero-btn"
+        >Boka din cykel nu</a
+      >
     </section>
 
     <section id="how-it-works">
@@ -90,7 +95,7 @@
 
         <div class="step-card">
           <i class="fa-solid fa-person-biking step-icon"></i>
-          <h3 data-i18n="how-step3">3. Kör hårt</h3>
+          <h3 data-i18n="how-step3">3. Cykla</h3>
           <p data-i18n="how-step3-desc">
             Ge dig ut på Vargöns många stigar och vägar. Njut av naturen och
             skön cykling.
@@ -106,7 +111,7 @@
         </div>
       </div>
 
-      <div class="booking-cta">
+      <div class="booking-cta" id="booking-cta">
         <div class="booking-cta-text">
           <h3 data-i18n="how-book-title">Boka via appen MOQO</h3>
           <p data-i18n="how-book-desc">
@@ -141,8 +146,8 @@
     </section>
 
     <section id="bikes">
-      <h2 data-i18n="bikes-title">Våra Cyklar</h2>
-      <p data-i18n="bikes-desc">Vi har 8 grymma cyklar redo för stigarna.</p>
+      <h2 data-i18n="bikes-title">Våra Cykelmodeller</h2>
+      <!-- <p data-i18n="bikes-desc">Vi har 8 grymma cyklar redo för stigarna.</p> -->
 
       <div class="bike-grid" id="bike-grid"></div>
     </section>
